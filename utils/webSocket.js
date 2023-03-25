@@ -1,4 +1,4 @@
-import { urlObj } from '@/utils/config.js'
+import { socketUrl } from '@/utils/config.js'
 let socketOpen = false;
 
 //发消息方法
@@ -13,7 +13,7 @@ const doSend = (message) => {
 const websocketInit = () => {
 	//建立连接
 	uni.connectSocket({
-		url: urlObj.socketUrl
+		url: socketUrl
 	});
 	//连接错误
 	uni.onSocketError(function(res) {

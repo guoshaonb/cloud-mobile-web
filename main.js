@@ -1,17 +1,16 @@
-import App from './App'
-import uView from "uview-ui"
-import flotage from 'components/flotage/flotage.vue'
-
-// #ifndef VUE3
 import Vue from 'vue'
-Vue.config.productionTip = false
-App.mpType = 'app'
-const app = new Vue({
-    ...App
-})
-app.$mount()
-// #endif
-
+import store from './store'
+import App from './App'
+import http from '@/api'
+import Json from './Json' //测试用数据
+import uView from "uview-ui"
+/**
+ *  因工具函数属于公司资产, 所以直接在Vue实例挂载几个常用的函数
+ *  所有测试用数据均存放于根目录json.js
+ *  
+ *  css部分使用了App.vue下的全局样式和iconfont图标，有需要图标库的可以留言。
+ *  示例使用了uni.scss下的变量, 除变量外已尽量移除特有语法,可直接替换为其他预处理器使用
+ */
 const msg = (title, icon = 'none', duration = 1500, mask = false) => {
 	//统一提示方便全局修改
 	if (Boolean(title) === false) {
@@ -42,18 +41,19 @@ const prePage = () => {
 	return prePage.$vm;
 }
 
-Vue.prototype.$api = { msg, json, prePage };
-
 Vue.use(uView);
-// 全局引入组件
-Vue.component("flotage", flotage)
+Vue.config.productionTip = false
+Vue.prototype.$fire = new Vue();
+Vue.prototype.$store = store;
+Vue.prototype.$api = {
+	msg,
+	json,
+	prePage
+};
+Vue.prototype.$http = http
+App.mpType = 'app'
 
-// #ifdef VUE3
-import { createSSRApp } from 'vue'
-export function createApp() {
-  const app = createSSRApp(App)
-  return {
-    app
-  }
-}
-// #endif
+const app = new Vue({
+	...App
+})
+app.$mount()

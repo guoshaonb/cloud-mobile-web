@@ -228,7 +228,7 @@ export const watchTheadsInter = () => {
 }
 
 // 延迟函数
-export const delay = (times) => {
+export const delayTime = (times) => {
 	return new Promise((reslove, reject) => {
 		setTimeout(() => {
 			reslove()
@@ -317,7 +317,7 @@ export const reloadPhone = async () => {
 	let page = getCurrentPages().pop(); // 跳转页面成功之后
 	// #ifdef  H5
 	if (page) {
-		await delay(1000)
+		await delayTime(1000)
 		page.empty = false
 		page.myphones = []
 		page.getMyPhoneList && page.getMyPhoneList()
@@ -362,15 +362,15 @@ async function expirtimes(_this, id, expirtime, e) {
 			// 如果过期时间大于2天,就回收设备
 			if (curTimeDate > expirTimeDate + (24 * 60000 * 60) * 2) {
 				_this.$api.msg("设备已到期,且给的2天期限已过！", "none", 3000);
-				await delay(3500)
+				await delayTime(3500)
 				_this.$api.msg("如果您游戏还挂在云手机上未退出,请联系微信群哦", "none", 3000);
-				await delay(3500)
+				await delayTime(3500)
 				_this.$api.msg("系统正在自动回收设备中,请稍后...", "none", 3000);
-				await delay(3500)
+				await delayTime(3500)
 				_this.$apis.gamep_resetphone(id).then(async res => {
 					if (res.code == 200) {
 						_this.$api.msg(`编号为${id}的云设备已回收,正在跳转！`);
-						await delay(2000)
+						await delayTime(2000)
 						uni.switchTab({
 							url: "/pages/phone/phone",
 							success() {
@@ -383,9 +383,9 @@ async function expirtimes(_this, id, expirtime, e) {
 				})
 			} else {
 				_this.$api.msg("设备已到期,系统给您最后2天时间哦！", "none", 3000);
-				await delay(3500)
+				await delayTime(3500)
 				_this.$api.msg("为了防止您游戏还未退出,就被系统回收,", "none", 3000);
-				await delay(3500)
+				await delayTime(3500)
 				_this.$api.msg("所以若不再使用,请及时退出游戏哦！", "none", 3000);
 				// 如果是在操作界面
 				// 跳转出来，强制用户只有观看广告才能继续使用
@@ -497,26 +497,26 @@ export const copyText = (value, text) => {
 // 登录状态过期
 export const statusOverdue = async (response) => {
 	// #ifdef H5
-	await delay(3000)
+	await delayTime(3000)
 	showToast("登陆状态已过期，请先点击上方的【返回按钮】，然后重新进来操作哦！", false, async e => {
-		await delay(1000)
+		await delayTime(1000)
 		if (e.confirm) {
 			showToast("请点击上方的【返回按钮】哦！", false)
 		}
 	})
 	// #endif
 	// #ifndef H5
-	uni.showToast({
-		title: "正在跳转登录",
-		icon: "loading",
-		duration: 1000,
-		success: async () => {
-			await delay(1500)
-			uni.navigateTo({
-				url: "/pages/user/login/login",
-			});
-		}
-	});
+	// uni.showToast({
+	// 	title: "正在跳转登录",
+	// 	icon: "loading",
+	// 	duration: 1000,
+	// 	success: async () => {
+	// 		await delayTime(1500)
+	// 		uni.navigateTo({
+	// 			url: "/pages/user/wxlogin/wxlogin",
+	// 		});
+	// 	}
+	// });
 	// #endif
 }
 
@@ -730,18 +730,18 @@ export const setCliCount = () => {
 // -----------------------------------------------防抖，节流，深拷贝-----------------------------------------------
 
 // 防抖
-export const debounce = (fn, delay) => {
+export const debounce = (fn, delayTime) => {
 	let timer = null
 	return function () {
 		if (timer) {
 			clearTimeout(timer)
 		}
-		timer = setTimeout(fn, delay)
+		timer = setTimeout(fn, delayTime)
 	}
 }
 
 // 节流
-export const throttle = (fn, delay) => {
+export const throttle = (fn, delayTime) => {
 	let valid = true
 	return function () {
 		if (!valid) {
@@ -753,7 +753,7 @@ export const throttle = (fn, delay) => {
 		setTimeout(() => {
 			fn()
 			valid = true;
-		}, delay)
+		}, delayTime)
 	}
 }
 

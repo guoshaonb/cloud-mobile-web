@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "设备",
+  "usingComponents": {
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "uni-number-box": "/components/uni-number-box"
+  }
+}

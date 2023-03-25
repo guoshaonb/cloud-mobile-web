@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.menu.data-v-21f21010 {
+  position: absolute;
+  right: 40rpx;
+}
+.menu .u-icon.data-v-21f21010 {
+  font-size: 50rpx;
+}
+.content.data-v-21f21010 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.invented1.data-v-21f21010 {
+  position: fixed;
+  top: 0;
+}
+.invented2.data-v-21f21010 {
+  position: fixed;
+  bottom: 0;
+}
