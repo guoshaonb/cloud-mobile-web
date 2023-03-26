@@ -89,7 +89,6 @@
 				goodsList: []
 			};
 		},
-
 		onLoad() {
 			this.loadData();
 		},

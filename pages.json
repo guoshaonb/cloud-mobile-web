@@ -5,9 +5,9 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				// #ifdef MP 
 				"navigationBarTitleText": "首页",
-				//"navigationStyle": "custom",
+				// #ifdef MP
+				"navigationStyle": "custom",
 				// #endif 
 				"app-plus": {
 					"titleNView": {
@@ -54,21 +54,39 @@
 		{
 			"path": "pages/set/set",
 			"style": {
-				"navigationBarTitleText": "设置"
+				"navigationBarTitleText": "设置",
+				// #ifdef MP
+				"navigationStyle": "custom"
+				// #endif
+				"app-plus": {
+					
+				}
 			}
 		},
 		{
 			"path": "pages/activity/lottery/lottery",
 			"style": {
 				"navigationBarTitleText": "天天幸运大轮盘",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				// #ifdef MP
+				"navigationStyle": "custom"
+				// #endif
+				"app-plus": {
+					
+				}
 			}
 		},
 		{
 			"path": "pages/activity/index/index",
 			"style": {
 				"navigationBarTitleText": "每日活动",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				// #ifdef MP
+				"navigationStyle": "custom"
+				// #endif
+				"app-plus": {
+					
+				}
 			}
 		},
 		{
@@ -86,7 +104,13 @@
 		{
 			"path": "pages/phone/phone",
 			"style": {
-				"navigationBarTitleText": "设备"
+				"navigationBarTitleText": "设备",
+				// #ifdef MP
+				"navigationStyle": "custom"
+				// #endif
+				"app-plus": {
+					
+				}
 			}
 		}, 
 		{
@@ -116,9 +140,7 @@
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "我的",
-				// #ifdef MP
 				"navigationStyle": "custom",
-				// #endif
 				"app-plus": {
 					"bounce": "none",
 					"titleNView": {
@@ -201,7 +223,14 @@
 		{
 			"path": "pages/notice/notice",
 			"style": {
-				"navigationBarTitleText": "通知"
+				"navigationBarTitleText": "通知",
+				// #ifdef MP
+				"navigationStyle": "custom"
+				// #endif
+				"app-plus": {
+					
+				}
+				
 			}
 		}, 
 		{

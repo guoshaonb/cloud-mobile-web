@@ -44,9 +44,6 @@
 				logining: false
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
 			...mapMutations(['login']),
 			inputChange(e) {

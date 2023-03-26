@@ -1,6 +1,6 @@
 {
-    "name" : "mix-mall",
-    "appid" : "__UNI__3ED1448",
+    "name" : "云手机",
+    "appid" : "__UNI__CBF411E",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -59,6 +59,13 @@
         "appid" : "",
         "setting" : {
             "urlCheck" : true
+        }
+    },
+    "h5" : {
+        "title" : "云手机",
+        "router" : {
+            "mode" : "hash",
+            "base" : "./"
         }
     }
 }

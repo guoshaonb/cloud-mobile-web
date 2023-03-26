@@ -99,7 +99,6 @@
 				moving: false,
 			}
 		},
-		onLoad() {},
 		// #ifndef MP
 		onNavigationBarButtonTap(e) {
 			const index = e.index;
