@@ -6,9 +6,7 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页",
-				// #ifdef MP
 				"navigationStyle": "custom",
-				// #endif 
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent",
@@ -55,12 +53,7 @@
 			"path": "pages/set/set",
 			"style": {
 				"navigationBarTitleText": "设置",
-				// #ifdef MP
 				"navigationStyle": "custom"
-				// #endif
-				"app-plus": {
-					
-				}
 			}
 		},
 		{
@@ -68,12 +61,7 @@
 			"style": {
 				"navigationBarTitleText": "天天幸运大轮盘",
 				"enablePullDownRefresh": false,
-				// #ifdef MP
 				"navigationStyle": "custom"
-				// #endif
-				"app-plus": {
-					
-				}
 			}
 		},
 		{
@@ -81,12 +69,7 @@
 			"style": {
 				"navigationBarTitleText": "每日活动",
 				"enablePullDownRefresh": false,
-				// #ifdef MP
 				"navigationStyle": "custom"
-				// #endif
-				"app-plus": {
-					
-				}
 			}
 		},
 		{
@@ -105,12 +88,7 @@
 			"path": "pages/phone/phone",
 			"style": {
 				"navigationBarTitleText": "设备",
-				// #ifdef MP
 				"navigationStyle": "custom"
-				// #endif
-				"app-plus": {
-					
-				}
 			}
 		}, 
 		{
@@ -224,13 +202,7 @@
 			"path": "pages/notice/notice",
 			"style": {
 				"navigationBarTitleText": "通知",
-				// #ifdef MP
 				"navigationStyle": "custom"
-				// #endif
-				"app-plus": {
-					
-				}
-				
 			}
 		}, 
 		{

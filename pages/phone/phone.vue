@@ -30,13 +30,11 @@
 								<text :style="{position:'relative',top:isWeixin ? '2rpx' : '1rpx'}">看广告,增加时长</text>
 							</u-button>
 							<view class="item-right-edit">
-								<u-button type="primary" plain size="medium"
-									@click="updremarksOpen(item)">
+								<u-button type="primary" plain size="medium" @click="updremarksOpen(item)">
 									<u-icon name="edit-pen"></u-icon><text
 										:style="{position:'relative',top:isWeixin ? '4rpx' : '0'}">编辑备注</text>
 								</u-button>
-								<u-button type="success" plain size="medium"
-									@click="getIntoOperate(item)">
+								<u-button type="success" plain size="medium" @click="getIntoOperate(item)">
 									<u-icon name="home-fill"></u-icon><text
 										:style="{position:'relative',top:isWeixin ? '4rpx' : '0'}">进入操作</text>
 								</u-button>
@@ -65,13 +63,16 @@
 				empty: false, //空白页现实  true|false
 				isWeixin: false,
 				cartList: [],
-				phoneList: [{
-					id: 1,
-					game: {
-						game_name: "天龙八部"
+				phoneList: [
+					{
+						id: 1,
+						game: {
+							game_name: "天龙八部"
+						},
+						phone_remarks: "云手机-0346",
+						expiration_date: "2024-03-25"
 					},
-					expiration_date: "2024-03-25"
-				}, ]
+				]
 			};
 		},
 		onLoad() {
