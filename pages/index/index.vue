@@ -16,7 +16,7 @@
 			<swiper class="carousel" circular @change="swiperChange">
 				<swiper-item v-for="(item, index) in carouselList" :key="index" class="carousel-item"
 					@click="navToDetailPage({title: '轮播广告'})">
-					<image :src="item.src" />
+					<image :src="item.src" mode="widthFix"/>
 				</swiper-item>
 			</swiper>
 			<!-- 自定义swiper指示器 -->
@@ -227,14 +227,14 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 680upx;
+			height: 570upx;
 			transition: .4s;
 		}
 	}
 
 	.carousel {
 		width: 100%;
-		height: 640upx;
+		height: 500upx;
 
 		.carousel-item {
 			width: 100%;
@@ -311,7 +311,7 @@
 
 	.cloud-banner {
 		width: 91.5%;
-		height: 280upx;
+		height: 250upx;
 		margin: 15upx auto;
 		background: #fff;
 		image {
