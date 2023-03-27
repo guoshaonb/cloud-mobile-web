@@ -214,7 +214,7 @@
 	/* 头部 轮播图 */
 	.carousel-section {
 		position: relative;
-		padding-top: 2upx;
+		padding-top: 0upx;
 
 		.titleNview-placing {
 			height: var(--status-bar-height);
@@ -227,14 +227,14 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 430upx;
+			height: 440upx;
 			transition: .4s;
 		}
 	}
 
 	.carousel {
 		width: 100%;
-		height: 380upx;
+		height: 390upx;
 
 		.carousel-item {
 			width: 100%;
