@@ -16,7 +16,7 @@
 			<swiper class="carousel" circular @change="swiperChange">
 				<swiper-item v-for="(item, index) in carouselList" :key="index" class="carousel-item"
 					@click="navToDetailPage({title: '轮播广告'})">
-					<image :src="item.src" mode="widthFix"/>
+					<image :src="item.src"/>
 				</swiper-item>
 			</swiper>
 			<!-- 自定义swiper指示器 -->
@@ -214,7 +214,7 @@
 	/* 头部 轮播图 */
 	.carousel-section {
 		position: relative;
-		padding-top: 10px;
+		padding-top: 2upx;
 
 		.titleNview-placing {
 			height: var(--status-bar-height);
@@ -227,14 +227,14 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 570upx;
+			height: 430upx;
 			transition: .4s;
 		}
 	}
 
 	.carousel {
 		width: 100%;
-		height: 500upx;
+		height: 380upx;
 
 		.carousel-item {
 			width: 100%;
@@ -311,13 +311,13 @@
 
 	.cloud-banner {
 		width: 91.5%;
-		height: 250upx;
+		height: 240upx;
 		margin: 15upx auto;
 		background: #fff;
 		image {
 			width: 100%;
 			height: 100%;
-			border-radius: 20upx;
+			border-radius: 10upx;
 		}
 	}
 
@@ -595,7 +595,7 @@
 	.guess-section {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0 30upx;
+		padding: 0 30upx 100upx;
 		background: #fff;
 
 		.guess-item {
