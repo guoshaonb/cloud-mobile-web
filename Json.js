@@ -11,15 +11,15 @@ const userInfo = {
 }
 /* 首页轮播图 */
 const carouselList = [{
-		src: "/static/temp/cloud-banner1.jpg",
+		src: "/static/temp/cloud-banner1.png",
 		background: "rgb(205, 215, 218)",
 	},
 	{
-		src: "/static/temp/cloud-banner2.jpg",
+		src: "/static/temp/cloud-banner2.png",
 		background: "rgb(205, 215, 218)",
 	},
 	{
-		src: "/static/temp/cloud-banner3.jpg",
+		src: "/static/temp/cloud-banner3.png",
 		background: "rgb(205, 215, 218)",
 	}
 ]
